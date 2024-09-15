@@ -5,13 +5,14 @@
 
 class ClassForFirstLesson
 {
+    static void task1();
+    static void task2();
+    static void task3();
+    static void task4();
+    static void divider();
 public:
-    ClassForFirstLesson();
-    void task1();
-    void task2();
-    void task3();
-    void task4();
-    void divider();
+    ClassForFirstLesson();    
+    static void run();
 };
 
 #endif // CLASSFORFIRSTLESSON_H

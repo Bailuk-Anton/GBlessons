@@ -79,3 +79,11 @@ void ClassForFirstLesson::divider()
 {
     std::cout<<"\n\n======================================\n\n";
 }
+
+void ClassForFirstLesson::run()
+{
+    task1();
+    task2();
+    task3();
+    task4();
+}
