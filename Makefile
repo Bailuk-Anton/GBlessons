@@ -54,9 +54,11 @@ OBJECTS_DIR   = ./
 
 SOURCES       = classforfirstlesson.cpp \
 		classforsecondlesson.cpp \
+		classforthirdlesson.cpp \
 		main.cpp 
 OBJECTS       = classforfirstlesson.o \
 		classforsecondlesson.o \
+		classforthirdlesson.o \
 		main.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -123,6 +125,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf \
@@ -142,8 +145,10 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		gb.pro classforfirstlesson.h \
-		classforsecondlesson.h classforfirstlesson.cpp \
+		classforsecondlesson.h \
+		classforthirdlesson.h classforfirstlesson.cpp \
 		classforsecondlesson.cpp \
+		classforthirdlesson.cpp \
 		main.cpp
 QMAKE_TARGET  = gb
 DESTDIR       = 
@@ -221,6 +226,7 @@ Makefile: gb.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf /usr
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf \
@@ -306,6 +312,7 @@ Makefile: gb.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf /usr
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exclusive_builds.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/toolchain.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/default_pre.prf:
@@ -340,8 +347,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents classforfirstlesson.h classforsecondlesson.h $(DISTDIR)/
-	$(COPY_FILE) --parents classforfirstlesson.cpp classforsecondlesson.cpp main.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents classforfirstlesson.h classforsecondlesson.h classforthirdlesson.h $(DISTDIR)/
+	$(COPY_FILE) --parents classforfirstlesson.cpp classforsecondlesson.cpp classforthirdlesson.cpp main.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -394,6 +401,9 @@ classforfirstlesson.o: classforfirstlesson.cpp classforfirstlesson.h
 
 classforsecondlesson.o: classforsecondlesson.cpp classforsecondlesson.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o classforsecondlesson.o classforsecondlesson.cpp
+
+classforthirdlesson.o: classforthirdlesson.cpp classforthirdlesson.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o classforthirdlesson.o classforthirdlesson.cpp
 
 main.o: main.cpp classforfirstlesson.h \
 		classforsecondlesson.h

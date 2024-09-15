@@ -97,8 +97,11 @@ void ClassForSecondLesson::divider()
 
 void ClassForSecondLesson::run()
 {
+    std::cout<<"\nУрок 3. Ввод данных пользователя. Строки.\n";
     task1();
     task2();
     task3();
     task4();
+    std::string str = "";
+    std::cin >> str;
 }

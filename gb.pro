@@ -10,6 +10,7 @@ CONFIG -= app_bundle
 SOURCES += \
         classforfirstlesson.cpp \
         classforsecondlesson.cpp \
+        classforthirdlesson.cpp \
         main.cpp
 
 # Default rules for deployment.
@@ -19,4 +20,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     classforfirstlesson.h \
-    classforsecondlesson.h
+    classforsecondlesson.h \
+    classforthirdlesson.h

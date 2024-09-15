@@ -82,8 +82,11 @@ void ClassForFirstLesson::divider()
 
 void ClassForFirstLesson::run()
 {
+    std::cout<<"\nУрок 2. Целочисленные переменные. Данные и вычисления.\n";
     task1();
     task2();
     task3();
     task4();
+    std::string str = "";
+    std::cin >> str;
 }
