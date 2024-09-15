@@ -4,6 +4,6 @@
 
 int main(int argc, char *argv[])
 {
-     ClassForFirstLesson::run();
+     ClassForSecondLesson::run();
     return 0;
 }
